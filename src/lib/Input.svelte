@@ -46,12 +46,12 @@
         >
         <div class="relative">
             <input
-                class="px-4 py-2 border border-gray-300 rounded-md w-full pr-10"
+                class="px-4 py-2 rounded-md w-full pr-10 bg-[#28605a] text-white"
                 type="number"
                 id="price-per-cubic-meter"
                 bind:value={price_per_cubic_meter}
             />
-            <span class="absolute top-0 right-0 pr-3 h-full flex items-center">
+            <span class="absolute top-0 right-0 pr-3 h-full flex items-center text-white">
                 &euro;
             </span>
         </div>
@@ -63,7 +63,7 @@
                 >Dikte in (mm):</label
             >
             <input
-                class="px-4 py-2 border border-gray-300 rounded-md w-full"
+                class="px-4 py-2 rounded-md w-full bg-[#28605a] text-white"
                 type="number"
                 id="thickness-mm"
                 bind:value={thickness_mm}
@@ -74,7 +74,7 @@
                 >Breedte in (mm):</label
             >
             <input
-                class="px-4 py-2 border border-gray-300 rounded-md w-full"
+                class="px-4 py-2 rounded-md w-full bg-[#28605a] text-white"
                 type="number"
                 id="width-mm"
                 bind:value={width_mm}
@@ -88,4 +88,14 @@
 </div>
 
 <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
 </style>
